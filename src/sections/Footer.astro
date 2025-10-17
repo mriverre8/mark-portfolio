@@ -1,0 +1,62 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="pt-10 pb-10 text-gray-700 dark:text-gray-300">
+    <div
+        class="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-5 px-5 font-medium sm:flex-row sm:gap-0"
+    >
+        <p id="footer-text"></p>
+        <div class="flex gap-4">
+            <a
+                href={`/${lang}/#about`}
+                class="hover:underline"
+                >{t('footer.about')}</a
+            >
+            <a
+                class="hover:underline"
+                href="mailto:rivemark00@gmail.com"
+                >{t('footer.contact')}</a
+            >
+        </div>
+    </div>
+    <div
+        class="mx-auto mt-5 flex w-full max-w-5xl flex-col items-center justify-start px-5 font-medium sm:mt-2 sm:flex-row"
+    >
+        <p class="flex items-center">
+            {t('footer.build')}<a
+                href="https://astro.build/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ml-1 flex"
+                ><img
+                    src="/astro_wordmark_light.svg"
+                    alt="Astro"
+                    class="h-4 dark:hidden"
+                />
+                <img
+                    src="/astro_wordmark_dark.svg"
+                    alt="Astro"
+                    class="hidden h-4 dark:block"
+                /></a
+            >
+        </p>
+    </div>
+</footer>
+
+<script
+    define:vars={{
+        portfolioText: t('footer.portfolio'),
+    }}
+>
+    const currentYear = new Date().getFullYear();
+
+    const footer = document.querySelector('#footer-text');
+
+    if (footer) {
+        footer.textContent = `${currentYear} Mark Rivera - ${portfolioText}.`;
+    }
+</script>

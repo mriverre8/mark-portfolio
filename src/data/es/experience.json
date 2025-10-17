@@ -1,0 +1,11 @@
+{
+    "experience": [
+        {
+            "role": "Junior, Frontend Developer",
+            "company": "Capgemini",
+            "isCurrent": true,
+            "duration": "Actualidad",
+            "description": "Participación en el desarrollo y mantenimiento de aplicaciones SPA, resolviendo tickets de frontend y corrigiendo errores según los requisitos funcionales. Comunicación directa con el cliente para validar requerimientos. Enfoque en la calidad del código mediante testing unitario, asegurando un (~100)% de cobertura."
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<main>
+    <section
+        id="about"
+        class="scroll-mt-20"
+    >
+        <div class="mx-auto my-24 w-full max-w-5xl space-y-2 px-4 sm:my-40">
+            <img
+                src="/profile.jpeg"
+                alt="Mark Rivera"
+                class="w-22 rounded-full object-cover"
+            />
+            <h1 class="text-4xl font-bold text-black dark:text-white">
+                Mark Rivera
+            </h1>
+            <p class="text-xl text-gray-800 dark:text-gray-200">
+                {t('about.description')}
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-2 sm:items-center">
+                <div
+                    class="inline-block w-max rounded-lg border border-gray-100 bg-white px-4 py-2 sm:mx-0 dark:border-gray-800 dark:bg-gray-900"
+                >
+                    <div class="flex items-center gap-3 sm:gap-4">
+                        <div class="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
+                            <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"
+                            ></span>
+                            <span
+                                class="relative inline-flex h-2 w-2 rounded-full bg-green-600 sm:h-2.5 sm:w-2.5"
+                            ></span>
+                        </div>
+                        <p
+                            class="text-sm font-medium text-gray-800 dark:text-gray-200"
+                        >
+                            {t('about.workingStatus')}
+                        </p>
+                    </div>
+                </div>
+
+                <a
+                    href="https://github.com/mriverre8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rounded-md border border-gray-100 bg-white px-4 py-2 font-semibold transition hover:border-blue-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-500"
+                >
+                    <img
+                        src="/github-white.svg"
+                        width="20"
+                        class="hidden dark:block"
+                    />
+                    <img
+                        src="/github.svg"
+                        width="20"
+                        class="block dark:hidden"
+                    />
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/mark-rivera-ba33b2233/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rounded-md border border-gray-100 bg-white px-4 py-2 font-semibold transition hover:border-blue-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-500"
+                >
+                    <img
+                        src="/linkedin.webp"
+                        width="22"
+                        class="hidden dark:block"
+                    />
+                    <img
+                        src="/linkedin-black.webp"
+                        width="22"
+                        class="block dark:hidden"
+                    />
+                </a>
+                <a
+                    href="mailto:rivemark00@gmail.com"
+                    class="flex items-center gap-2 rounded-md border border-gray-100 bg-white px-4 py-2 font-semibold text-gray-800 transition hover:border-blue-400 sm:text-sm dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-500"
+                >
+                    <img
+                        src="/mail.svg"
+                        width="20"
+                        class="dark:invert"
+                    />
+                </a>
+            </div>
+        </div>
+    </section>
+</main>

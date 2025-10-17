@@ -1,0 +1,196 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header
+    class="fixed top-0 z-10 mx-auto mt-2 flex w-full items-center justify-center"
+>
+    <nav
+        class="flex items-center justify-center rounded-full border border-gray-200/90 bg-white/90 px-3 font-medium text-gray-800 dark:border-gray-800/90 dark:bg-gray-900/90 dark:text-gray-200"
+    >
+        <a
+            href={`/${lang}/#experience`}
+            class="relative block px-2 py-2 transition hover:text-blue-400 dark:hover:text-blue-500"
+            >{t('header.experience')}</a
+        >
+        <a
+            href={`/${lang}/#projects`}
+            class="relative block px-2 py-2 transition hover:text-blue-400 dark:hover:text-blue-500"
+        >
+            {t('header.projects')}
+        </a>
+        <a
+            href={`/${lang}/#stack`}
+            class="relative block px-2 py-2 transition hover:text-blue-400 dark:hover:text-blue-500"
+            >{t('header.stack')}</a
+        >
+        <div class="flex justify-center">
+            <button
+                id="language-selector"
+                class="relative block cursor-pointer px-2 py-2 hover:text-blue-400 dark:hover:text-blue-500"
+                >{languages[lang]}</button
+            >
+            <div
+                id="language-options"
+                class="absolute top-10 flex hidden flex-col items-center justify-center gap-0.5 rounded-lg border border-gray-200/90 bg-white/90 px-1.5 py-1.5 font-medium text-gray-800 dark:border-gray-800/90 dark:bg-gray-900/90 dark:text-gray-200"
+            >
+                {
+                    Object.entries(languages).map(
+                        ([key, label]: [string, string]) => {
+                            return (
+                                <a
+                                    href={`/${key}`}
+                                    id={`${key}-lang`}
+                                    class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                >
+                                    {label}
+                                </a>
+                            );
+                        }
+                    )
+                }
+            </div>
+        </div>
+        <div class="flex justify-end">
+            <img
+                id="theme-selector"
+                class="relative mx-1 block cursor-pointer transition hover:scale-120 hover:transform dark:invert"
+                width="18"
+            />
+            <div
+                id="theme-options"
+                class="absolute top-10 flex hidden flex-col items-center justify-center gap-0.5 rounded-lg border border-gray-200/90 bg-white/90 px-1.5 py-1.5 font-medium text-gray-800 dark:border-gray-800/90 dark:bg-gray-900/90 dark:text-gray-200"
+            >
+                <button
+                    id="light-theme"
+                    class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >{t('header.light')}</button
+                >
+                <button
+                    id="dark-theme"
+                    class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >{t('header.dark')}</button
+                >
+                <button
+                    id="system-theme"
+                    class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >{t('header.system')}</button
+                >
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    // Dropdown elements
+    const languageSelector = document.getElementById('language-selector');
+    const languageOptions = document.getElementById('language-options');
+    const themeSelector = document.getElementById(
+        'theme-selector'
+    ) as HTMLImageElement;
+    const themeOptions = document.getElementById('theme-options');
+
+    //Theme option buttons
+    const lightThemeBtn = document.getElementById('light-theme');
+    const darkThemeBtn = document.getElementById('dark-theme');
+    const systemThemeBtn = document.getElementById('system-theme');
+
+    const themeImages = {
+        light: '/sun-medium.svg',
+        dark: '/moon.svg',
+        system: '/monitor.svg',
+    };
+
+    // Function to update theme selector icon
+    function updateThemeSelector() {
+        if (!themeSelector) return;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            themeSelector.src = themeImages.light;
+            themeSelector.alt = 'Light Theme';
+        } else if (savedTheme === 'dark') {
+            themeSelector.src = themeImages.dark;
+            themeSelector.alt = 'Dark Theme';
+        } else {
+            themeSelector.src = themeImages.system;
+            themeSelector.alt = 'System Theme';
+        }
+    }
+
+    updateThemeSelector();
+
+    // Toggle dropdowns
+    languageSelector?.addEventListener('click', () => {
+        languageOptions?.classList.toggle('hidden');
+        themeOptions?.classList.add('hidden');
+    });
+
+    themeSelector?.addEventListener('click', () => {
+        themeOptions?.classList.toggle('hidden');
+        languageOptions?.classList.add('hidden');
+    });
+
+    // Theme option click handlers
+    lightThemeBtn?.addEventListener('click', () => {
+        if (themeSelector) {
+            themeSelector.src = themeImages.light;
+            themeSelector.alt = 'Light Theme';
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove('dark');
+        }
+        themeOptions?.classList.add('hidden');
+    });
+
+    darkThemeBtn?.addEventListener('click', () => {
+        if (themeSelector) {
+            themeSelector.src = themeImages.dark;
+            themeSelector.alt = 'Dark Theme';
+            localStorage.theme = 'dark';
+            document.documentElement.classList.add('dark');
+        }
+        themeOptions?.classList.add('hidden');
+    });
+
+    systemThemeBtn?.addEventListener('click', () => {
+        if (themeSelector) {
+            themeSelector.src = themeImages.system;
+            themeSelector.alt = 'System Theme';
+            localStorage.removeItem('theme');
+            if (
+                window.matchMedia &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches
+            ) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+        themeOptions?.classList.add('hidden');
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (event) => {
+        const target = event.target as Node;
+        if (
+            languageSelector &&
+            languageOptions &&
+            !languageSelector.contains(target) &&
+            !languageOptions.contains(target)
+        ) {
+            languageOptions.classList.add('hidden');
+        }
+        if (
+            themeSelector &&
+            themeOptions &&
+            !themeSelector.contains(target) &&
+            !themeOptions.contains(target)
+        ) {
+            themeOptions.classList.add('hidden');
+        }
+    });
+</script>

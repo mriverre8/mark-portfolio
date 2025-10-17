@@ -1,0 +1,30 @@
+{
+    "projects": [
+        {
+            "pinned": true,
+            "featured": true,
+            "name": "Tesoros en Casa",
+            "description": "Tesoros en Casa és una aplicació web que ofereix un catàleg d'antiguitats úniques.",
+            "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
+            "deploy": "https://tesorosencasa.vercel.app/",
+            "github": "https://github.com/mriverre8/tesorosencasa"
+        },
+        {
+            "pinned": true,
+            "featured": false,
+            "name": "Malker",
+            "description": "Una aplicació web per gestionar un pla amb els teus amics.",
+            "stack": [
+                "React",
+                "Tailwind CSS",
+                "Javascript",
+                "Python",
+                "Flask",
+                "Firebase",
+                "Vite"
+            ],
+            "deploy": "https://jam-productions.github.io/malker/",
+            "github": "https://github.com/JAM-Productions/malker"
+        }
+    ]
+}

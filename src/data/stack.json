@@ -1,0 +1,52 @@
+{
+    "stack": [
+        {
+            "name": "Visual Studio Code",
+            "icon": "/vscode.svg"
+        },
+        {
+            "name": "Next.js",
+            "icon": "/nextjs-icon-dark.svg"
+        },
+        {
+            "name": "React",
+            "icon": "/react-light.svg",
+            "dark_icon": "/react.svg"
+        },
+        {
+            "name": "Tailwind CSS",
+            "icon": "/tailwindcss.svg"
+        },
+        {
+            "name": "TypeScript",
+            "icon": "/typescript.svg"
+        },
+        {
+            "name": "Git",
+            "icon": "/git.svg"
+        },
+        {
+            "name": "GitHub",
+            "icon": "/github.svg",
+            "dark_icon": "/github-white.svg"
+        },
+
+        {
+            "name": "Supabase",
+            "icon": "/supabase.svg"
+        },
+        {
+            "name": "HTML5",
+            "icon": "/html5.svg"
+        },
+
+        {
+            "name": "JavaScript",
+            "icon": "/javascript.svg"
+        },
+        {
+            "name": "Jest",
+            "icon": "/jest.svg"
+        }
+    ]
+}

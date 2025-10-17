@@ -1,0 +1,22 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+import Header from '../../../sections/Header.astro';
+import ProjectLibrary from '../../../sections/ProjectLibrary.astro';
+import Footer from '../../../sections/Footer.astro';
+
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('meta.title.projects')}>
+    <div class="flex min-h-screen flex-col">
+        <Header />
+        <div class="flex-1">
+            <ProjectLibrary />
+        </div>
+        <Footer />
+    </div>
+</Layout>

@@ -1,0 +1,67 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+interface ExperienceItem {
+    duration: string;
+    role: string;
+    company: string;
+    description: string;
+    isCurrent: boolean;
+}
+
+const experienceData = await import(`../data/${lang}/experience.json`);
+const experience = experienceData.experience as ExperienceItem[];
+---
+
+<main>
+    <section
+        id="experience"
+        class="scroll-mt-20"
+    >
+        <div class="mx-auto my-24 w-full max-w-5xl px-4 sm:my-40">
+            <h2
+                class="mb-7 text-3xl font-semibold text-black/80 dark:text-white"
+            >
+                {t('experience.years')}
+            </h2>
+
+            <ol
+                class="relative ml-4.5 border-s border-gray-300 dark:border-gray-700"
+            >
+                {
+                    experience.map((exp) => (
+                        <li class="ms-6 mb-10">
+                            <div
+                                class={`flex flex-col justify-center rounded-lg border ${exp.isCurrent ? 'border-blue-400 dark:border-blue-500' : 'border-gray-100 dark:border-gray-800'} bg-[#fffdff] p-6 dark:bg-[#13151a]`}
+                            >
+                                <div
+                                    class={`absolute -start-1.5 h-3 w-3 rounded-full border ${exp.isCurrent ? 'border-blue-300 bg-blue-400 dark:border-blue-400 dark:bg-blue-500' : 'border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700'}`}
+                                />
+                                <time class="mb-1 block text-sm text-black/70 md:hidden dark:text-white/70">
+                                    {exp.duration}
+                                </time>
+                                <div class="mb-1 flex items-baseline justify-between">
+                                    <h3 class="text-lg font-bold text-blue-400 dark:text-blue-500">
+                                        {exp.role}
+                                    </h3>
+                                    <time class="hidden text-sm text-black/70 md:block dark:text-white/70">
+                                        {exp.duration}
+                                    </time>
+                                </div>
+                                <p class="mb-1 text-lg font-semibold text-black/80 dark:text-white/90">
+                                    {exp.company}
+                                </p>
+                                <p class="text-base leading-relaxed text-black/90 dark:text-white/90">
+                                    {exp.description}
+                                </p>
+                            </div>
+                        </li>
+                    ))
+                }
+            </ol>
+        </div>
+    </section>
+</main>

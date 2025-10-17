@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import Header from '../../sections/Header.astro';
+import About from '../../sections/About.astro';
+import Experience from '../../sections/Experience.astro';
+import Projects from '../../sections/Projects.astro';
+import Stack from '../../sections/Stack.astro';
+import Footer from '../../sections/Footer.astro';
+
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('meta.title')}>
+    <div class="flex min-h-screen flex-col">
+        <Header />
+        <div class="flex-1">
+            <About />
+            <Experience />
+            <Projects />
+            <Stack />
+        </div>
+        <Footer />
+    </div>
+</Layout>

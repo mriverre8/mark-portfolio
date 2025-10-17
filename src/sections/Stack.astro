@@ -1,0 +1,46 @@
+---
+import { stack } from '../data/stack.json';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<main>
+    <section
+        id="stack"
+        class="scroll-mt-20"
+    >
+        <div class="mx-auto my-24 w-full max-w-5xl px-4 sm:my-40">
+            <h2
+                class="mb-7 text-center text-3xl font-semibold text-black/80 dark:text-white"
+            >
+                {t('stack.habilities')}
+            </h2>
+            <div class="mt-8 flex flex-wrap justify-center gap-10">
+                {
+                    stack.map((item) => (
+                        <div class="group relative cursor-pointer">
+                            <img
+                                src={
+                                    item.dark_icon ? item.dark_icon : item.icon
+                                }
+                                alt={item.name}
+                                class="hidden h-9 w-9 transition-transform duration-200 hover:scale-110 sm:h-12 sm:w-12 dark:block"
+                            />
+                            <img
+                                src={item.icon}
+                                alt={item.name}
+                                class="block h-9 w-9 transition-transform duration-200 hover:scale-110 sm:h-12 sm:w-12 dark:hidden"
+                            />
+
+                            <span class="pointer-events-none absolute top-full left-1/2 mt-2 -translate-x-1/2 transform rounded bg-gray-200 px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:bg-gray-800 dark:text-white">
+                                {item.name}
+                            </span>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+</main>
