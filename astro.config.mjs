@@ -7,15 +7,17 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  i18n: {
-      defaultLocale: 'es',
-      locales: ['es', 'en', 'ca'],
-      routing: { prefixDefaultLocale: true },
-  },
+    i18n: {
+        defaultLocale: 'es',
+        locales: ['es', 'en', 'ca'],
+        routing: { prefixDefaultLocale: true },
+    },
 
-  vite: {
-      plugins: [tailwindcss()],
-  },
+    vite: {
+        plugins: [tailwindcss()],
+    },
 
-  adapter: vercel(),
+    site: 'https://mark-portfolio-virid.vercel.app/es/',
+
+    adapter: vercel(),
 });
