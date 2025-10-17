@@ -17,7 +17,5 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
 
-    site: 'https://mark-portfolio-virid.vercel.app/es/',
-
     adapter: vercel(),
 });
