@@ -2,7 +2,7 @@
     "projects": [
         {
             "pinned": true,
-            "featured": true,
+            "featured": false,
             "name": "Tesoros en Casa",
             "description": "Tesoros en Casa is a web application that offers a catalog of unique antiques.",
             "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
