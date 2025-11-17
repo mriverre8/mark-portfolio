@@ -29,80 +29,78 @@ const projects = projectsData.projects as ProjectItem[];
 
             <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-10">
                 {
-                    projects
-                        .filter((project) => project.pinned)
-                        .map((project) => (
-                            <article class="flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-[#fffdff] dark:border-gray-800 dark:bg-[#13151a]">
-                                <div class="flex flex-1 flex-col justify-between p-6">
-                                    <div>
-                                        <div class="flex">
-                                            <h3 class="flex-[9] text-2xl font-bold text-gray-800 dark:text-gray-200">
-                                                {project.name}
-                                            </h3>
-                                            {project.featured && (
-                                                <div class="mt-1.5 flex flex-[1] items-start justify-center">
-                                                    <img
-                                                        src="/star.svg"
-                                                        alt="Star"
-                                                    />
-                                                </div>
-                                            )}
-                                        </div>
-                                        <div class="mt-3 flex flex-wrap gap-2">
-                                            {project.stack.map((tech) => (
-                                                <span class="rounded-full border border-gray-200 bg-gray-100/40 px-3 py-1 text-xs text-black/70 dark:border-gray-700 dark:bg-gray-800/60 dark:text-white/70">
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
-                                        <p class="mt-4 text-sm text-black/90 dark:text-white/90">
-                                            {project.description}
-                                        </p>
-                                    </div>
-
-                                    <div class="mt-6 flex flex-wrap gap-3">
-                                        {project.github && (
-                                            <a
-                                                href={project.github}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                class="flex items-center gap-2 rounded-lg border border-gray-100 bg-white px-4 py-2 text-sm font-medium text-gray-800 hover:border-blue-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-500"
-                                            >
+                    projects.map((project) => (
+                        <article class="flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-[#fffdff] dark:border-gray-800 dark:bg-[#13151a]">
+                            <div class="flex flex-1 flex-col justify-between p-6">
+                                <div>
+                                    <div class="flex">
+                                        <h3 class="flex-[9] text-2xl font-bold text-gray-800 dark:text-gray-200">
+                                            {project.name}
+                                        </h3>
+                                        {project.featured && (
+                                            <div class="mt-1.5 flex flex-[1] items-start justify-center">
                                                 <img
-                                                    src="/github-white.svg"
-                                                    width="18"
-                                                    class="hidden dark:block"
-                                                    alt="GitHub"
+                                                    src="/star.svg"
+                                                    alt="Star"
                                                 />
-                                                <img
-                                                    src="/github.svg"
-                                                    width="18"
-                                                    class="block dark:hidden"
-                                                    alt="GitHub"
-                                                />
-                                                {t('projects.repo')}
-                                            </a>
-                                        )}
-                                        {project.deploy && (
-                                            <a
-                                                href={project.deploy}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                class="flex items-center gap-2 rounded-lg border border-gray-100 bg-white px-4 py-2 text-sm font-medium text-gray-800 hover:border-blue-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-500"
-                                            >
-                                                <img
-                                                    src="/external-link.svg"
-                                                    width="18"
-                                                    class="dark:invert"
-                                                    alt="Visitar"
-                                                />
-                                                {t('projects.visit')}
-                                            </a>
+                                            </div>
                                         )}
                                     </div>
+                                    <div class="mt-3 flex flex-wrap gap-2">
+                                        {project.stack.map((tech) => (
+                                            <span class="rounded-full border border-gray-200 bg-gray-100/40 px-3 py-1 text-xs text-black/70 dark:border-gray-700 dark:bg-gray-800/60 dark:text-white/70">
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <p class="mt-4 text-sm text-black/90 dark:text-white/90">
+                                        {project.description}
+                                    </p>
                                 </div>
-                            </article>
-                        ))
+
+                                <div class="mt-6 flex flex-wrap gap-3">
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex items-center gap-2 rounded-lg border border-gray-100 bg-white px-4 py-2 text-sm font-medium text-gray-800 hover:border-blue-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-500"
+                                        >
+                                            <img
+                                                src="/github-white.svg"
+                                                width="18"
+                                                class="hidden dark:block"
+                                                alt="GitHub"
+                                            />
+                                            <img
+                                                src="/github.svg"
+                                                width="18"
+                                                class="block dark:hidden"
+                                                alt="GitHub"
+                                            />
+                                            {t('projects.repo')}
+                                        </a>
+                                    )}
+                                    {project.deploy && (
+                                        <a
+                                            href={project.deploy}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="flex items-center gap-2 rounded-lg border border-gray-100 bg-white px-4 py-2 text-sm font-medium text-gray-800 hover:border-blue-400 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-500"
+                                        >
+                                            <img
+                                                src="/external-link.svg"
+                                                width="18"
+                                                class="dark:invert"
+                                                alt="Visitar"
+                                            />
+                                            {t('projects.visit')}
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        </article>
+                    ))
                 }
             </div>
             <div class="text-center">
