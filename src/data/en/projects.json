@@ -2,15 +2,23 @@
     "projects": [
         {
             "pinned": true,
+            "featured": true,
+            "name": "Foslog",
+            "description": "Foslog is a web app to write and read reviews for films, series, video games, books, and music all in one place.",
+            "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
+            "deploy": "https://foslog.vercel.app/",
+            "github": "https://github.com/JAM-Productions/foslog"
+        },
+        {
+            "pinned": true,
             "featured": false,
             "name": "Tesoros en Casa",
             "description": "Tesoros en Casa is a web application that offers a catalog of unique antiques.",
             "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
             "deploy": "https://tesorosencasa.vercel.app/",
-            "github": "https://github.com/mriverre8/tesorosencasa"
         },
         {
-            "pinned": true,
+            "pinned": false,
             "featured": false,
             "name": "Malker",
             "description": "A web application to manage a plan with your friends.",
@@ -23,7 +31,6 @@
                 "Firebase",
                 "Vite"
             ],
-            "deploy": "https://jam-productions.github.io/malker/",
             "github": "https://github.com/JAM-Productions/malker"
         }
     ]
