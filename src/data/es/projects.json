@@ -15,7 +15,7 @@
             "name": "Tesoros en Casa",
             "description": "Tesoros en Casa es una aplicación web que ofrece un catálogo de antigüedades únicas.",
             "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
-            "deploy": "https://tesorosencasa.vercel.app/",
+            "deploy": "https://tesorosencasa.vercel.app/"
         },
         {
             "pinned": false,
