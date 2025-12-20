@@ -8,30 +8,6 @@
             "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
             "deploy": "https://foslog.vercel.app/",
             "github": "https://github.com/JAM-Productions/foslog"
-        },
-        {
-            "pinned": true,
-            "featured": false,
-            "name": "Tesoros en Casa",
-            "description": "Tesoros en Casa is a web application that offers a catalog of unique antiques.",
-            "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
-            "deploy": "https://tesorosencasa.vercel.app/"
-        },
-        {
-            "pinned": false,
-            "featured": false,
-            "name": "Malker",
-            "description": "A web application to manage a plan with your friends.",
-            "stack": [
-                "React",
-                "Tailwind CSS",
-                "Javascript",
-                "Python",
-                "Flask",
-                "Firebase",
-                "Vite"
-            ],
-            "github": "https://github.com/JAM-Productions/malker"
         }
     ]
 }
