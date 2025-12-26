@@ -8,6 +8,14 @@
             "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
             "deploy": "https://foslog.vercel.app/",
             "github": "https://github.com/JAM-Productions/foslog"
+        },
+        {
+            "pinned": true,
+            "featured": false,
+            "name": "Advent of Code",
+            "description": "The Advent of Code solution for 2025🎄.",
+            "stack": ["JavaScript"],
+            "github": "https://github.com/mriverre8/advent-of-code-2025"
         }
     ]
 }
