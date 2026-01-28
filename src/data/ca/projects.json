@@ -16,6 +16,15 @@
             "description": "La solució de l’Advent of Code per al 2025🎄.",
             "stack": ["JavaScript"],
             "github": "https://github.com/mriverre8/advent-of-code-2025"
+        },
+        {
+            "pinned": false,
+            "featured": false,
+            "name": "Bemobile Challenge",
+            "description": "Solució del repte proposat per Bemobile",
+            "stack": ["Next.js", "Typescript", "CSS", "React Testing Library", "Jest"],
+            "deploy": "https://bemobile-challenge.vercel.app/",
+            "github": "https://github.com/mriverre8/bemobile-challenge"
         }
     ]
 }
