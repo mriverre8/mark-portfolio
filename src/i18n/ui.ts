@@ -17,7 +17,7 @@ export const ui = {
         'header.dark': 'Oscuro',
         'header.system': 'Sistema',
         'about.description':
-            'Desarrollador Frontend titulado en ingeniería informática.',
+            'Desarrollador de Software titulado en Ingeniería Informática.',
         'about.workingStatus': 'Disponible para trabajar',
         'experience.experience': 'Trayectoria Laboral',
         'experience.years': '+3 años de experiencia',
@@ -45,7 +45,7 @@ export const ui = {
         'header.dark': 'Dark',
         'header.system': 'System',
         'about.description':
-            'Frontend developer with a degree in computer engineering.',
+            'Software Developer with a degree in Computer Engineering.',
         'about.workingStatus': 'Available for work',
         'experience.experience': 'Work history',
         'experience.years': '+3 years of experience',
@@ -73,7 +73,7 @@ export const ui = {
         'header.dark': 'Fosc',
         'header.system': 'Sistema',
         'about.description':
-            'Programador Frontend titulat en enginyeria informàtica.',
+            'Desenvolupador de Software titulat en Enginyeria Informàtica.',
         'about.workingStatus': 'Disponible per treballar',
         'experience.experience': 'Trajectòria Laboral',
         'experience.years': "+3 anys d'experiència",
