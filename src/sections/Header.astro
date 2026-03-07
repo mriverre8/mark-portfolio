@@ -1,5 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations, getLocalizedPathname } from '../i18n/utils';
+import {
+    getLangFromUrl,
+    useTranslations,
+    getLocalizedPathname,
+} from '../i18n/utils';
 import { languages } from '../i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
@@ -8,7 +12,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header
-    class="fixed top-0 z-10 mx-auto mt-2 flex w-full items-center justify-center"
+    class="animate-fade-in-down fixed top-0 z-10 mx-auto mt-2 flex w-full items-center justify-center"
 >
     <nav
         class="flex items-center justify-center rounded-full border border-gray-200/90 bg-white/90 px-3 font-medium text-gray-800 dark:border-gray-800/90 dark:bg-gray-900/90 dark:text-gray-200"
@@ -44,7 +48,10 @@ const currentPath = Astro.url.pathname;
                         ([key, label]: [string, string]) => {
                             return (
                                 <a
-                                    href={getLocalizedPathname(currentPath, key)}
+                                    href={getLocalizedPathname(
+                                        currentPath,
+                                        key
+                                    )}
                                     id={`${key}-lang`}
                                     class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
                                 >

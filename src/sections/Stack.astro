@@ -19,19 +19,21 @@ const t = useTranslations(lang);
             </h2>
             <div class="mt-8 flex flex-wrap justify-center gap-10">
                 {
-                    stack.map((item) => (
+                    stack.map((item, index) => (
                         <div class="group relative cursor-pointer">
                             <img
                                 src={
                                     item.dark_icon ? item.dark_icon : item.icon
                                 }
                                 alt={item.name}
-                                class="hidden h-9 w-9 transition-transform duration-200 hover:scale-110 sm:h-12 sm:w-12 dark:block"
+                                class="animate-fade-in-down hidden h-9 w-9 transition-transform duration-200 hover:scale-110 sm:h-12 sm:w-12 dark:block"
+                                style={`animation-delay: ${index * 100}ms;`}
                             />
                             <img
                                 src={item.icon}
                                 alt={item.name}
-                                class="block h-9 w-9 transition-transform duration-200 hover:scale-110 sm:h-12 sm:w-12 dark:hidden"
+                                class="animate-fade-in-down block h-9 w-9 transition-transform duration-200 hover:scale-110 sm:h-12 sm:w-12 dark:hidden"
+                                style={`animation-delay: ${index * 100}ms;`}
                             />
 
                             <span class="pointer-events-none absolute top-full left-1/2 mt-2 -translate-x-1/2 transform rounded bg-gray-200 px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:bg-gray-800 dark:text-white">

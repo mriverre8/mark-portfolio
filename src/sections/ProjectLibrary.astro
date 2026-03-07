@@ -29,8 +29,11 @@ const projects = projectsData.projects as ProjectItem[];
 
             <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-10">
                 {
-                    projects.map((project) => (
-                        <article class="flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-[#fffdff] dark:border-gray-800 dark:bg-[#13151a]">
+                    projects.map((project, index) => (
+                        <article
+                            class="animate-pulse-fade-in flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-[#fffdff] dark:border-gray-800 dark:bg-[#13151a]"
+                            style={`animation-delay: ${index * 100}ms;`}
+                        >
                             <div class="flex flex-1 flex-col justify-between p-6">
                                 <div>
                                     <div class="flex">

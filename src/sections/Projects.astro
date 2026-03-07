@@ -48,8 +48,11 @@ const projects = projectsData.projects as ProjectItem[];
                 {
                     projects
                         .filter((project) => project.pinned)
-                        .map((project) => (
-                            <article class="flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-[#fffdff] dark:border-gray-800 dark:bg-[#13151a]">
+                        .map((project, index) => (
+                            <article
+                                class="animate-pulse-fade-in flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-[#fffdff] dark:border-gray-800 dark:bg-[#13151a]"
+                                style={`animation-delay: ${index * 100}ms;`}
+                            >
                                 <div class="flex flex-1 flex-col justify-between p-6">
                                     <div>
                                         <div class="flex">
