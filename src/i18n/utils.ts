@@ -11,3 +11,12 @@ export function useTranslations(lang: keyof typeof ui) {
         return ui[lang][key] || ui[defaultLang][key];
     };
 }
+
+export function getLocalizedPathname(pathname: string, targetLang: string) {
+    const segments = pathname.split('/');
+    if (segments.length > 1 && Object.keys(ui).includes(segments[1] as string)) {
+        segments[1] = targetLang;
+        return segments.join('/');
+    }
+    return `/${targetLang}${pathname}`;
+}
