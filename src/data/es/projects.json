@@ -12,26 +12,19 @@
         {
             "pinned": true,
             "featured": false,
-            "name": "Tesoros en Casa",
-            "description": "Tesoros en Casa es una aplicación web que ofrece un catálogo de antigüedades únicas.",
-            "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
-            "deploy": "https://tesorosencasa.vercel.app/"
+            "name": "Advent of Code",
+            "description": "La solución de Advent of Code para 2025🎄.",
+            "stack": ["JavaScript"],
+            "github": "https://github.com/mriverre8/advent-of-code-2025"
         },
         {
             "pinned": false,
             "featured": false,
-            "name": "Malker",
-            "description": "Una aplicación web para gestionar un plan con tus amigos.",
-            "stack": [
-                "React",
-                "Tailwind CSS",
-                "Javascript",
-                "Python",
-                "Flask",
-                "Firebase",
-                "Vite"
-            ],
-            "github": "https://github.com/JAM-Productions/malker"
+            "name": "Bemobile Challenge",
+            "description": "Solución del challenge propuesto por Bemobile",
+            "stack": ["Next.js", "Typescript", "CSS", "React Testing Library", "Jest"],
+            "deploy": "https://bemobile-challenge.vercel.app/",
+            "github": "https://github.com/mriverre8/bemobile-challenge"
         }
     ]
 }
