@@ -68,6 +68,7 @@ const currentPath = Astro.url.pathname;
                 id="theme-selector"
                 class="relative mx-1 block cursor-pointer transition hover:scale-120 hover:transform dark:invert"
                 width="18"
+                alt={t('header.themeAlt')}
             />
             <div
                 id="theme-options"
@@ -93,13 +94,17 @@ const currentPath = Astro.url.pathname;
     </nav>
 </header>
 
-<script>
+<script
+    define:vars={{
+        lightThemeAlt: t('header.lightAlt'),
+        darkThemeAlt: t('header.darkAlt'),
+        systemThemeAlt: t('header.systemAlt'),
+    }}
+>
     // Dropdown elements
     const languageSelector = document.getElementById('language-selector');
     const languageOptions = document.getElementById('language-options');
-    const themeSelector = document.getElementById(
-        'theme-selector'
-    ) as HTMLImageElement;
+    const themeSelector = document.getElementById('theme-selector');
     const themeOptions = document.getElementById('theme-options');
 
     //Theme option buttons
@@ -120,13 +125,13 @@ const currentPath = Astro.url.pathname;
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
             themeSelector.src = themeImages.light;
-            themeSelector.alt = 'Light Theme';
+            themeSelector.alt = lightThemeAlt;
         } else if (savedTheme === 'dark') {
             themeSelector.src = themeImages.dark;
-            themeSelector.alt = 'Dark Theme';
+            themeSelector.alt = darkThemeAlt;
         } else {
             themeSelector.src = themeImages.system;
-            themeSelector.alt = 'System Theme';
+            themeSelector.alt = systemThemeAlt;
         }
     }
 
@@ -147,7 +152,7 @@ const currentPath = Astro.url.pathname;
     lightThemeBtn?.addEventListener('click', () => {
         if (themeSelector) {
             themeSelector.src = themeImages.light;
-            themeSelector.alt = 'Light Theme';
+            themeSelector.alt = lightThemeAlt;
             localStorage.theme = 'light';
             document.documentElement.classList.remove('dark');
         }
@@ -157,7 +162,7 @@ const currentPath = Astro.url.pathname;
     darkThemeBtn?.addEventListener('click', () => {
         if (themeSelector) {
             themeSelector.src = themeImages.dark;
-            themeSelector.alt = 'Dark Theme';
+            themeSelector.alt = darkThemeAlt;
             localStorage.theme = 'dark';
             document.documentElement.classList.add('dark');
         }
@@ -167,7 +172,7 @@ const currentPath = Astro.url.pathname;
     systemThemeBtn?.addEventListener('click', () => {
         if (themeSelector) {
             themeSelector.src = themeImages.system;
-            themeSelector.alt = 'System Theme';
+            themeSelector.alt = systemThemeAlt;
             localStorage.removeItem('theme');
             if (
                 window.matchMedia &&
@@ -183,7 +188,7 @@ const currentPath = Astro.url.pathname;
 
     // Close dropdowns when clicking outside
     document.addEventListener('click', (event) => {
-        const target = event.target as Node;
+        const target = event.target;
         if (
             languageSelector &&
             languageOptions &&
