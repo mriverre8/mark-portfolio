@@ -25,6 +25,23 @@
             "stack": ["Next.js", "Typescript", "CSS", "React Testing Library", "Jest"],
             "deploy": "https://bemobile-challenge.vercel.app/",
             "github": "https://github.com/mriverre8/bemobile-challenge"
+        },
+        {
+            "pinned": false,
+            "featured": false,
+            "name": "Inkpostor",
+            "description": "Joc multijugador inspirat en el popular joc de l'impostor",
+            "stack": ["Vite", "Typescript", "Tailwind CSS", "Zustand", "Vitest"],
+            "deploy": "https://inkpostor.vercel.app/",
+            "github": "https://github.com/JAM-Productions/inkpostor-frontend"
+        },
+        {
+            "pinned": false,
+            "featured": false,
+            "name": "Inkpostor Backend",
+            "description": "Backend d'Inkpostor. Comunicació en temps real mitjançant sockets",
+            "stack": ["Node.js", "Typescript", "Socket.IO", "Express", "Vitest"],
+            "github": "https://github.com/JAM-Productions/inkpostor-backend"
         }
     ]
 }
