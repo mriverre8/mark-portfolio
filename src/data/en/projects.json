@@ -31,7 +31,7 @@
             "featured": false,
             "name": "Inkpostor",
             "description": "Multiplayer game inspired by the popular imposter game",
-            "stack": ["Vite", "Typescript", "Tailwind CSS", "Zustand", "Vitest"],
+            "stack": ["Vite", "React", "Typescript", "Tailwind CSS", "Zustand", "Vitest"],
             "deploy": "https://inkpostor.vercel.app/",
             "github": "https://github.com/JAM-Productions/inkpostor-frontend"
         },
