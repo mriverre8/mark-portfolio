@@ -5,7 +5,18 @@
             "company": "Capgemini",
             "isCurrent": true,
             "duration": "Actualitat",
-            "description": "Participació en el desenvolupament i manteniment d'aplicacions SPA, resolent tickets de frontend i corregint errors segons els requisits funcionals. Comunicació directa amb el client per validar requeriments. Enfocament en la qualitat del codi mitjançant testing unitari, assegurant una cobertura del (~100%)."
+            "description": [
+                "Desenvolupament i manteniment de múltiples aplicacions Single Page Application (SPA) per al sector assegurador utilitzant React.",
+                "Desenvolupament de components React reutilitzables, afavorint la reutilització de codi, el manteniment i la consistència entre diferents aplicacions.",
+                "Implementació de noves funcionalitats integrant la lògica de negoci i consumint API REST proporcionades per l'equip backend.",
+                "Integració de serveis GET i POST, interpretant la documentació a Swagger per construir correctament les peticions i els seus payloads.",
+                "Gestió de l'estat global de les aplicacions mitjançant Nanostores.",
+                "Desenvolupament de proves unitàries i d'integració amb Jest i React Testing Library, mantenint una cobertura de proves propera al 100% en les noves funcionalitats per minimitzar regressions i garantir la qualitat del programari.",
+                "Revisió freqüent de codi mitjançant Pull Requests, assegurant el compliment de les bones pràctiques, el manteniment i la qualitat del codi abans de la seva integració.",
+                "Participació activa en sessions de refinament, estimació d'històries d'usuari, dailies i reunions de seguiment amb el client per validar requisits funcionals.",
+                "Col·laboració amb l'equip backend en la detecció i resolució d'incidències relacionades amb la integració de serveis i API.",
+                "Treball en un equip Agile d'aproximadament 10 desenvolupadors frontend, utilitzant Git, GitHub, Jenkins, Rally i Confluence com a part del flux de desenvolupament."
+            ]
         }
     ]
 }

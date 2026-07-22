@@ -5,7 +5,18 @@
             "company": "Capgemini",
             "isCurrent": true,
             "duration": "Actualidad",
-            "description": "Participación en el desarrollo y mantenimiento de aplicaciones SPA, resolviendo tickets de frontend y corrigiendo errores según los requisitos funcionales. Comunicación directa con el cliente para validar requerimientos. Enfoque en la calidad del código mediante testing unitario, asegurando un (~100)% de cobertura."
+            "description": [
+                "Desarrollo y mantenimiento de múltiples aplicaciones Single Page Application (SPA) para el sector asegurador utilizando React.",
+                "Desarrollo de componentes React reutilizables, favoreciendo la reutilización de código, la mantenibilidad y la consistencia entre diferentes aplicaciones.",
+                "Implementación de nuevas funcionalidades integrando la lógica de negocio y consumiendo APIs REST proporcionadas por el equipo backend.",
+                "Integración de servicios GET y POST, interpretando la documentación en Swagger para construir correctamente las peticiones y sus payloads.",
+                "Gestión del estado global de las aplicaciones mediante Nanostores.",
+                "Desarrollo de pruebas unitarias y de integración con Jest y React Testing Library, manteniendo una cobertura de pruebas cercana al 100% en las nuevas funcionalidades para minimizar regresiones y garantizar la calidad del software.",
+                "Revisión frecuente de código mediante Pull Requests, asegurando el cumplimiento de buenas prácticas, la mantenibilidad y la calidad del código antes de su integración.",
+                "Participación activa en sesiones de refinamiento, estimación de historias de usuario, dailies y reuniones de seguimiento con el cliente para validar requisitos funcionales.",
+                "Colaboración con el equipo backend en la detección y resolución de incidencias relacionadas con la integración de servicios y APIs.",
+                "Trabajo en un equipo Agile de aproximadamente 10 desarrolladores frontend, utilizando Git, GitHub, Jenkins, Rally y Confluence como parte del flujo de desarrollo."
+            ]
         }
     ]
 }

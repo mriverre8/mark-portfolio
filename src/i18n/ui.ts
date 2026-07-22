@@ -24,7 +24,9 @@ export const ui = {
             'Desarrollador de Software titulado en Ingeniería Informática.',
         'about.workingStatus': 'Disponible para trabajar',
         'experience.experience': 'Trayectoria Laboral',
-        'experience.years': '+3 años de experiencia',
+        'experience.years': '+4 años de experiencia',
+        'experience.showMore': 'Ver más',
+        'experience.showLess': 'Ver menos',
         'projects.projects': 'Proyectos',
         'projects.iconAlt': 'Icono de código',
         'projects.description':
@@ -57,7 +59,9 @@ export const ui = {
             'Software Developer with a degree in Computer Engineering.',
         'about.workingStatus': 'Available for work',
         'experience.experience': 'Work history',
-        'experience.years': '+3 years of experience',
+        'experience.years': '+4 years of experience',
+        'experience.showMore': 'Show more',
+        'experience.showLess': 'Show less',
         'projects.projects': 'Projects',
         'projects.iconAlt': 'Code icon',
         'projects.description':
@@ -90,7 +94,9 @@ export const ui = {
             'Desenvolupador de Software titulat en Enginyeria Informàtica.',
         'about.workingStatus': 'Disponible per treballar',
         'experience.experience': 'Trajectòria Laboral',
-        'experience.years': "+3 anys d'experiència",
+        'experience.years': "+4 anys d'experiència",
+        'experience.showMore': "Veure'n més",
+        'experience.showLess': "Veure'n menys",
         'projects.projects': 'Projectes',
         'projects.iconAlt': 'Icona de codi',
         'projects.description':

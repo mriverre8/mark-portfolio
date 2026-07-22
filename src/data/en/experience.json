@@ -5,7 +5,18 @@
             "company": "Capgemini",
             "isCurrent": true,
             "duration": "Current",
-            "description": "Participation in the development and maintenance of SPA applications, solving frontend tickets and fixing bugs according to functional requirements. Direct communication with the client to validate requirements. Focus on code quality through unit testing, ensuring (~100%) coverage."
+            "description": [
+                "Development and maintenance of multiple Single Page Applications (SPAs) for the insurance sector using React.",
+                "Development of reusable React components, promoting code reuse, maintainability, and consistency across different applications.",
+                "Implementation of new features by integrating business logic and consuming REST APIs provided by the backend team.",
+                "Integration of GET and POST services, interpreting Swagger documentation to correctly build requests and their payloads.",
+                "Management of the applications' global state using Nanostores.",
+                "Development of unit and integration tests with Jest and React Testing Library, maintaining close to 100% test coverage for new features to minimize regressions and ensure software quality.",
+                "Frequent code reviews through Pull Requests, ensuring compliance with best practices, maintainability, and code quality before integration.",
+                "Active participation in refinement sessions, user story estimation, daily stand-ups, and client follow-up meetings to validate functional requirements.",
+                "Collaboration with the backend team to identify and resolve incidents related to service and API integration.",
+                "Work within an Agile team of approximately 10 frontend developers, using Git, GitHub, Jenkins, Rally, and Confluence as part of the development workflow."
+            ]
         }
     ]
 }
