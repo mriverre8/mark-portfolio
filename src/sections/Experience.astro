@@ -1,19 +1,11 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getExperience } from '../data/content';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-interface ExperienceItem {
-    duration: string;
-    role: string;
-    company: string;
-    description: string[];
-    isCurrent: boolean;
-}
-
-const experienceData = await import(`../data/${lang}/experience.json`);
-const experience = experienceData.experience as ExperienceItem[];
+const experience = getExperience(lang);
 ---
 
 <main>

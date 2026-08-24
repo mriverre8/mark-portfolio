@@ -1,13 +1,25 @@
 ---
-import { getLangFromUrl } from '../i18n/utils';
+import { getLangFromUrl, getLocalizedPathname } from '../i18n/utils';
+import { languages, defaultLang, ogLocales } from '../i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
 
 interface Props {
     title: string;
+    description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+
+// Same page in every language, so search engines treat them as one document.
+const alternates = Object.keys(languages).map((code) => ({
+    code,
+    href: new URL(getLocalizedPathname(Astro.url.pathname, code), Astro.site)
+        .href,
+}));
+const xDefault = alternates.find(({ code }) => code === defaultLang)!.href;
 ---
 
 <!doctype html>
@@ -53,7 +65,63 @@ const { title } = Astro.props;
         <title>{title}</title>
         <meta
             name="description"
-            content="Mark Portfolio - Software Developer"
+            content={description}
+        />
+        <link
+            rel="canonical"
+            href={canonical}
+        />
+        {
+            alternates.map(({ code, href }) => (
+                <link
+                    rel="alternate"
+                    hreflang={code}
+                    href={href}
+                />
+            ))
+        }
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href={xDefault}
+        />
+        <meta
+            property="og:type"
+            content="website"
+        />
+        <meta
+            property="og:url"
+            content={canonical}
+        />
+        <meta
+            property="og:title"
+            content={title}
+        />
+        <meta
+            property="og:description"
+            content={description}
+        />
+        <meta
+            property="og:locale"
+            content={ogLocales[lang]}
+        />
+        {
+            alternates
+                .filter(({ code }) => code !== lang)
+                .map(({ code }) => (
+                    <meta
+                        property="og:locale:alternate"
+                        content={ogLocales[code as keyof typeof ogLocales]}
+                    />
+                ))
+        }
+        <meta
+            property="og:image"
+            content={new URL('/profile.jpeg', Astro.site).href}
+        />
+        <meta
+            name="twitter:card"
+            content="summary"
         />
         <meta
             name="keywords"

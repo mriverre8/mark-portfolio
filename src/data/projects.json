@@ -1,0 +1,86 @@
+{
+    "projects": [
+        {
+            "pinned": true,
+            "featured": true,
+            "name": "Foslog",
+            "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
+            "deploy": "https://foslog.vercel.app/",
+            "github": "https://github.com/JAM-Productions/foslog",
+            "description": {
+                "es": "Foslog es una aplicación web para escribir y leer reseñas de películas, series, videojuegos, libros y música, todo en un solo lugar.",
+                "en": "Foslog is a web app to write and read reviews for films, series, video games, books, and music all in one place.",
+                "ca": "Foslog es una aplicació web per escriure i llegir ressenyes de pel·lícules, sèries, videojocs, llibres i música tot en un sol lloc."
+            }
+        },
+        {
+            "pinned": true,
+            "featured": false,
+            "name": "Advent of Code",
+            "stack": ["JavaScript"],
+            "github": "https://github.com/mriverre8/advent-of-code-2025",
+            "description": {
+                "es": "La solución de Advent of Code para 2025🎄.",
+                "en": "The Advent of Code solution for 2025🎄.",
+                "ca": "La solució de l’Advent of Code per al 2025🎄."
+            }
+        },
+        {
+            "pinned": false,
+            "featured": false,
+            "name": "Bemobile Challenge",
+            "stack": [
+                "Next.js",
+                "Typescript",
+                "CSS",
+                "React Testing Library",
+                "Jest"
+            ],
+            "deploy": "https://bemobile-challenge.vercel.app/",
+            "github": "https://github.com/mriverre8/bemobile-challenge",
+            "description": {
+                "es": "Solución del challenge propuesto por Bemobile",
+                "en": "Solution to the challenge proposed by Bemobile",
+                "ca": "Solució del repte proposat per Bemobile"
+            }
+        },
+        {
+            "pinned": false,
+            "featured": false,
+            "name": "Inkpostor",
+            "stack": [
+                "Vite",
+                "React",
+                "Typescript",
+                "Tailwind CSS",
+                "Zustand",
+                "Vitest"
+            ],
+            "deploy": "https://inkpostor.vercel.app/",
+            "github": "https://github.com/JAM-Productions/inkpostor-frontend",
+            "description": {
+                "es": "Juego multijugador inspirado en el popular juego del impostor",
+                "en": "Multiplayer game inspired by the popular imposter game",
+                "ca": "Joc multijugador inspirat en el popular joc de l'impostor"
+            }
+        },
+        {
+            "pinned": false,
+            "featured": false,
+            "name": "Inkpostor Backend",
+            "stack": [
+                "Node.js",
+                "Typescript",
+                "Socket.IO",
+                "Express",
+                "Vitest"
+            ],
+            "github": "https://github.com/JAM-Productions/inkpostor-backend",
+            "description": {
+                "es": "Backend de Inkpostor. Comunicación en tiempo real medainte sockets",
+                "en": "Impostor Backend. Real-time communication via sockets",
+                "ca": "Backend d'Inkpostor. Comunicació en temps real mitjançant sockets"
+            }
+        }
+    ]
+}

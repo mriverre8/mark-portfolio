@@ -1,0 +1,52 @@
+{
+    "experience": [
+        {
+            "role": "Junior, Frontend Developer",
+            "company": "Capgemini",
+            "isCurrent": true,
+            "duration": {
+                "es": "Actualidad",
+                "en": "Current",
+                "ca": "Actualitat"
+            },
+            "description": {
+                "es": [
+                    "Desarrollo y mantenimiento de múltiples aplicaciones Single Page Application (SPA) para el sector asegurador utilizando React.",
+                    "Desarrollo de componentes React reutilizables, favoreciendo la reutilización de código, la mantenibilidad y la consistencia entre diferentes aplicaciones.",
+                    "Implementación de nuevas funcionalidades integrando la lógica de negocio y consumiendo APIs REST proporcionadas por el equipo backend.",
+                    "Integración de servicios GET y POST, interpretando la documentación en Swagger para construir correctamente las peticiones y sus payloads.",
+                    "Gestión del estado global de las aplicaciones mediante Nanostores.",
+                    "Desarrollo de pruebas unitarias y de integración con Jest y React Testing Library, manteniendo una cobertura de pruebas cercana al 100% en las nuevas funcionalidades para minimizar regresiones y garantizar la calidad del software.",
+                    "Revisión frecuente de código mediante Pull Requests, asegurando el cumplimiento de buenas prácticas, la mantenibilidad y la calidad del código antes de su integración.",
+                    "Participación activa en sesiones de refinamiento, estimación de historias de usuario, dailies y reuniones de seguimiento con el cliente para validar requisitos funcionales.",
+                    "Colaboración con el equipo backend en la detección y resolución de incidencias relacionadas con la integración de servicios y APIs.",
+                    "Trabajo en un equipo Agile de aproximadamente 10 desarrolladores frontend, utilizando Git, GitHub, Jenkins, Rally y Confluence como parte del flujo de desarrollo."
+                ],
+                "en": [
+                    "Development and maintenance of multiple Single Page Applications (SPAs) for the insurance sector using React.",
+                    "Development of reusable React components, promoting code reuse, maintainability, and consistency across different applications.",
+                    "Implementation of new features by integrating business logic and consuming REST APIs provided by the backend team.",
+                    "Integration of GET and POST services, interpreting Swagger documentation to correctly build requests and their payloads.",
+                    "Management of the applications' global state using Nanostores.",
+                    "Development of unit and integration tests with Jest and React Testing Library, maintaining close to 100% test coverage for new features to minimize regressions and ensure software quality.",
+                    "Frequent code reviews through Pull Requests, ensuring compliance with best practices, maintainability, and code quality before integration.",
+                    "Active participation in refinement sessions, user story estimation, daily stand-ups, and client follow-up meetings to validate functional requirements.",
+                    "Collaboration with the backend team to identify and resolve incidents related to service and API integration.",
+                    "Work within an Agile team of approximately 10 frontend developers, using Git, GitHub, Jenkins, Rally, and Confluence as part of the development workflow."
+                ],
+                "ca": [
+                    "Desenvolupament i manteniment de múltiples aplicacions Single Page Application (SPA) per al sector assegurador utilitzant React.",
+                    "Desenvolupament de components React reutilitzables, afavorint la reutilització de codi, el manteniment i la consistència entre diferents aplicacions.",
+                    "Implementació de noves funcionalitats integrant la lògica de negoci i consumint API REST proporcionades per l'equip backend.",
+                    "Integració de serveis GET i POST, interpretant la documentació a Swagger per construir correctament les peticions i els seus payloads.",
+                    "Gestió de l'estat global de les aplicacions mitjançant Nanostores.",
+                    "Desenvolupament de proves unitàries i d'integració amb Jest i React Testing Library, mantenint una cobertura de proves propera al 100% en les noves funcionalitats per minimitzar regressions i garantir la qualitat del programari.",
+                    "Revisió freqüent de codi mitjançant Pull Requests, assegurant el compliment de les bones pràctiques, el manteniment i la qualitat del codi abans de la seva integració.",
+                    "Participació activa en sessions de refinament, estimació d'històries d'usuari, dailies i reunions de seguiment amb el client per validar requisits funcionals.",
+                    "Col·laboració amb l'equip backend en la detecció i resolució d'incidències relacionades amb la integració de serveis i API.",
+                    "Treball en un equip Agile d'aproximadament 10 desenvolupadors frontend, utilitzant Git, GitHub, Jenkins, Rally i Confluence com a part del flux de desenvolupament."
+                ]
+            }
+        }
+    ]
+}

@@ -1,22 +1,12 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getProjects } from '../data/content';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-interface ProjectItem {
-    pinned: boolean;
-    featured?: boolean;
-    name: string;
-    description: string;
-    stack: string[];
-    github?: string;
-    deploy?: string;
-}
-
-const projectsData = await import(`../data/${lang}/projects.json`);
-const projects = projectsData.projects as ProjectItem[];
+const projects = getProjects(lang);
 ---
 
 <main>

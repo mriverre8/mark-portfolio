@@ -4,12 +4,23 @@ export const languages = {
     ca: 'CA',
 };
 
+/** Full locale codes for Open Graph, which expects language_TERRITORY. */
+export const ogLocales = {
+    es: 'es_ES',
+    en: 'en_US',
+    ca: 'ca_ES',
+};
+
 export const defaultLang = 'es';
 
 export const ui = {
     es: {
         'meta.title': 'Mark Portafolio - Desarrollador de Software',
         'meta.title.projects': 'Mark Portafolio - Proyectos',
+        'meta.description':
+            'Portafolio de Mark Rivera, Desarrollador de Software titulado en Ingeniería Informática. Experiencia laboral, proyectos y stack técnico.',
+        'meta.description.projects':
+            'Biblioteca completa de los proyectos desarrollados por Mark Rivera, Desarrollador de Software.',
         'header.experience': 'Experiencia',
         'header.projects': 'Proyectos',
         'header.stack': 'Habilidades',
@@ -45,6 +56,10 @@ export const ui = {
     en: {
         'meta.title': 'Mark Portfolio - Software Developer',
         'meta.title.projects': 'Mark Portfolio - Projects',
+        'meta.description':
+            'Portfolio of Mark Rivera, Software Developer with a degree in Computer Engineering. Work experience, projects and tech stack.',
+        'meta.description.projects':
+            'Full library of the projects built by Mark Rivera, Software Developer.',
         'header.experience': 'Experience',
         'header.projects': 'Projects',
         'header.stack': 'Stack',
@@ -80,6 +95,10 @@ export const ui = {
     ca: {
         'meta.title': 'Mark Portafoli - Desenvolupador de Software',
         'meta.title.projects': 'Mark Portafoli - Projectes',
+        'meta.description':
+            'Portafoli de Mark Rivera, Desenvolupador de Software titulat en Enginyeria Informàtica. Experiència laboral, projectes i stack tècnic.',
+        'meta.description.projects':
+            'Biblioteca completa dels projectes desenvolupats per Mark Rivera, Desenvolupador de Software.',
         'header.experience': 'Experiència',
         'header.projects': 'Projectes',
         'header.stack': 'Habilitats',
@@ -113,3 +132,6 @@ export const ui = {
         'footer.build': 'Fet amb ',
     },
 };
+
+export type Lang = keyof typeof ui;
+export type UIKey = keyof (typeof ui)[typeof defaultLang];
