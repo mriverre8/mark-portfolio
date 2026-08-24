@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "pinned": true,
+            "pinned": false,
             "featured": true,
             "name": "Foslog",
             "stack": ["React", "Next.js", "Tailwind CSS", "Supabase"],
@@ -45,8 +45,8 @@
             }
         },
         {
-            "pinned": false,
-            "featured": false,
+            "pinned": true,
+            "featured": true,
             "name": "Inkpostor",
             "stack": [
                 "Vite",
