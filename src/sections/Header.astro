@@ -15,33 +15,33 @@ const currentPath = Astro.url.pathname;
     class="animate-fade-in-down fixed top-0 z-10 mx-auto mt-2 flex w-full items-center justify-center"
 >
     <nav
-        class="flex items-center justify-center rounded-full border border-gray-200/90 bg-white/90 px-3 font-medium text-gray-800 dark:border-gray-800/90 dark:bg-gray-900/90 dark:text-gray-200"
+        class="border-edge bg-surface/85 text-ink shadow-card flex items-center justify-center rounded-full border px-3 font-medium backdrop-blur-md"
     >
         <a
             href={`/${lang}/#experience`}
-            class="relative block px-2 py-2 transition hover:text-blue-400 dark:hover:text-blue-500"
+            class="hover:text-accent relative block px-2 py-2 transition-colors"
             >{t('header.experience')}</a
         >
         <a
             href={`/${lang}/#projects`}
-            class="relative block px-2 py-2 transition hover:text-blue-400 dark:hover:text-blue-500"
+            class="hover:text-accent relative block px-2 py-2 transition-colors"
         >
             {t('header.projects')}
         </a>
         <a
             href={`/${lang}/#stack`}
-            class="relative block px-2 py-2 transition hover:text-blue-400 dark:hover:text-blue-500"
+            class="hover:text-accent relative block px-2 py-2 transition-colors"
             >{t('header.stack')}</a
         >
         <div class="flex justify-center">
             <button
                 id="language-selector"
-                class="relative block cursor-pointer px-2 py-2 hover:text-blue-400 dark:hover:text-blue-500"
+                class="hover:text-accent relative block cursor-pointer px-2 py-2 transition-colors"
                 >{languages[lang]}</button
             >
             <div
                 id="language-options"
-                class="absolute top-10 flex hidden flex-col items-center justify-center gap-0.5 rounded-lg border border-gray-200/90 bg-white/90 px-1.5 py-1.5 font-medium text-gray-800 dark:border-gray-800/90 dark:bg-gray-900/90 dark:text-gray-200"
+                class="border-edge bg-surface/95 text-ink shadow-card absolute top-10 flex hidden flex-col items-center justify-center gap-0.5 rounded-lg border px-1.5 py-1.5 font-medium backdrop-blur-sm"
             >
                 {
                     Object.entries(languages).map(
@@ -53,7 +53,7 @@ const currentPath = Astro.url.pathname;
                                         key
                                     )}
                                     id={`${key}-lang`}
-                                    class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                    class="hover:bg-surface-soft hover:text-accent relative block w-full cursor-pointer rounded-md px-3 py-0.5 transition-colors"
                                 >
                                     {label}
                                 </a>
@@ -72,21 +72,21 @@ const currentPath = Astro.url.pathname;
             />
             <div
                 id="theme-options"
-                class="absolute top-10 flex hidden flex-col items-center justify-center gap-0.5 rounded-lg border border-gray-200/90 bg-white/90 px-1.5 py-1.5 font-medium text-gray-800 dark:border-gray-800/90 dark:bg-gray-900/90 dark:text-gray-200"
+                class="border-edge bg-surface/95 text-ink shadow-card absolute top-10 flex hidden flex-col items-center justify-center gap-0.5 rounded-lg border px-1.5 py-1.5 font-medium backdrop-blur-sm"
             >
                 <button
                     id="light-theme"
-                    class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    class="hover:bg-surface-soft hover:text-accent relative block w-full cursor-pointer rounded-md px-3 py-0.5 transition-colors"
                     >{t('header.light')}</button
                 >
                 <button
                     id="dark-theme"
-                    class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    class="hover:bg-surface-soft hover:text-accent relative block w-full cursor-pointer rounded-md px-3 py-0.5 transition-colors"
                     >{t('header.dark')}</button
                 >
                 <button
                     id="system-theme"
-                    class="relative block w-full cursor-pointer rounded-md px-3 py-0.5 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    class="hover:bg-surface-soft hover:text-accent relative block w-full cursor-pointer rounded-md px-3 py-0.5 transition-colors"
                     >{t('header.system')}</button
                 >
             </div>

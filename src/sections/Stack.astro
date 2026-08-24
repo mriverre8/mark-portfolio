@@ -12,9 +12,7 @@ const t = useTranslations(lang);
         class="scroll-mt-20"
     >
         <div class="mx-auto my-24 w-full max-w-5xl px-4 sm:my-40">
-            <h2
-                class="mb-7 text-center text-3xl font-semibold text-black/80 dark:text-white"
-            >
+            <h2 class="text-ink mb-7 text-center text-3xl font-semibold">
                 {t('stack.habilities')}
             </h2>
             <div class="mt-8 flex flex-wrap justify-center gap-10">
@@ -36,7 +34,7 @@ const t = useTranslations(lang);
                                 style={`animation-delay: ${index * 100}ms;`}
                             />
 
-                            <span class="pointer-events-none absolute top-full left-1/2 mt-2 -translate-x-1/2 transform rounded bg-gray-200 px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:bg-gray-800 dark:text-white">
+                            <span class="border-edge bg-surface text-ink shadow-card pointer-events-none absolute top-full left-1/2 mt-2 -translate-x-1/2 transform rounded border px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                                 {item.name}
                             </span>
                         </div>

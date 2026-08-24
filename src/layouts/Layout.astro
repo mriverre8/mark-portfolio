@@ -203,6 +203,65 @@ const xDefault = alternates.find(({ code }) => code === defaultLang)!.href;
     @import 'tailwind-animations';
 
     @custom-variant dark (&:where(.dark, .dark *));
+    :root {
+        --palette-page: #eff3f9;
+        --palette-page-tint: rgba(96, 165, 250, 0.3);
+        --palette-page-haze: #f6f9fd;
+        --palette-surface: #ffffff;
+        --palette-surface-soft: #f4f7fc;
+        --palette-edge: #dde4ef;
+        --palette-edge-strong: #b9c6db;
+        --palette-accent: #2563eb;
+        --palette-accent-soft: #93b4f7;
+        --palette-badge: #e8effc;
+        --palette-badge-ink: #1d4ed8;
+        --palette-ink: #101827;
+        --palette-ink-muted: #4a5567;
+        --palette-shadow-card:
+            0 1px 2px rgba(16, 24, 39, 0.05),
+            0 10px 26px -16px rgba(16, 24, 39, 0.28);
+        --palette-shadow-card-hover:
+            0 1px 2px rgba(16, 24, 39, 0.06),
+            0 18px 38px -18px rgba(37, 99, 235, 0.35);
+    }
+
+    .dark {
+        --palette-page: #0f1115;
+        --palette-page-tint: rgba(37, 99, 235, 0.28);
+        --palette-page-haze: #121722;
+        --palette-surface: #15181f;
+        --palette-surface-soft: #1c202a;
+        --palette-edge: #272d38;
+        --palette-edge-strong: #3b4453;
+        --palette-accent: #60a5fa;
+        --palette-accent-soft: #3b82f6;
+        --palette-badge: #1b263c;
+        --palette-badge-ink: #93b8fb;
+        --palette-ink: #edf1f7;
+        --palette-ink-muted: #9aa5b8;
+        --palette-shadow-card:
+            0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 30px -18px rgba(0, 0, 0, 0.8);
+        --palette-shadow-card-hover:
+            0 1px 2px rgba(0, 0, 0, 0.4),
+            0 18px 38px -18px rgba(37, 99, 235, 0.45);
+    }
+
+    @theme inline {
+        --color-page: var(--palette-page);
+        --color-surface: var(--palette-surface);
+        --color-surface-soft: var(--palette-surface-soft);
+        --color-edge: var(--palette-edge);
+        --color-edge-strong: var(--palette-edge-strong);
+        --color-accent: var(--palette-accent);
+        --color-accent-soft: var(--palette-accent-soft);
+        --color-badge: var(--palette-badge);
+        --color-badge-ink: var(--palette-badge-ink);
+        --color-ink: var(--palette-ink);
+        --color-ink-muted: var(--palette-ink-muted);
+
+        --shadow-card: var(--palette-shadow-card);
+        --shadow-card-hover: var(--palette-shadow-card-hover);
+    }
 
     body {
         font-family: 'Montserrat', sans-serif;
@@ -220,28 +279,15 @@ const xDefault = alternates.find(({ code }) => code === defaultLang)!.href;
     }
 
     body {
-        background: #f7f9fc;
-    }
-
-    .dark body {
-        background: #0f1115;
+        background: var(--palette-page);
     }
 
     #background-gradient {
         background: radial-gradient(
             circle at top center,
-            rgba(173, 216, 255, 0.45) 0%,
-            rgba(255, 255, 255, 0.6) 40%,
-            #f7f9fc 80%
-        );
-    }
-
-    .dark #background-gradient {
-        background: radial-gradient(
-            circle at top center,
-            rgba(0, 102, 255, 0.274) 0%,
-            rgba(0, 102, 255, 0.05) 40%,
-            #13151a 70%
+            var(--palette-page-tint) 0%,
+            var(--palette-page-haze) 45%,
+            var(--palette-page) 80%
         );
     }
 </style>
