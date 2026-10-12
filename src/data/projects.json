@@ -14,7 +14,7 @@
             }
         },
         {
-            "pinned": true,
+            "pinned": false,
             "featured": false,
             "name": "Advent of Code",
             "stack": ["JavaScript"],
@@ -80,6 +80,28 @@
                 "es": "Backend de Inkpostor. Comunicación en tiempo real medainte sockets",
                 "en": "Impostor Backend. Real-time communication via sockets",
                 "ca": "Backend d'Inkpostor. Comunicació en temps real mitjançant sockets"
+            }
+        },
+        {
+            "pinned": true,
+            "featured": true,
+            "name": "Krafitt",
+            "stack": [
+                "Next.js",
+                "React",
+                "Typescript",
+                "Tailwind CSS",
+                "Prisma",
+                "PostgreSQL",
+                "Zustand",
+                "Vitest"
+            ],
+            "deploy": "https://krafitt.vercel.app/",
+            "github": "https://github.com/mriverre8/krafitt",
+            "description": {
+                "es": "Tracker de progreso en el gimnasio: crea rutinas de varias semanas, entrena el día que toca y registra cada serie al momento.",
+                "en": "Gym progress tracker: build multi-week routines, train the day the routine puts in front of you, and log every set as you do it.",
+                "ca": "Tracker de progrés al gimnàs: crea rutines de diverses setmanes, entrena el dia que toca i registra cada sèrie al moment."
             }
         }
     ]
